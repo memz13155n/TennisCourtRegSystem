@@ -74,8 +74,7 @@ int won;
  char Passist[]="AsstCoach";
  
  system("cls");
- printf("**********GREATER PORTMORE TABLE TENNIS 
-CLUB*************\n\n\n");
+ printf("**********GREATER PORTMORE TABLE TENNIS CLUB*************\n\n\n");
  printf("Please Enter Username: ");
  scanf("%s", UserName);
  printf("Please Enter Password: ");
@@ -89,28 +88,24 @@ CLUB*************\n\n\n");
  {
  system("cls");
  
- printf("*********************Welcome Miss Lewis!
-****************\n\n\n");
+ printf("*********************Welcome Miss Lewis! ****************\n\n\n");
  Secretary_fun();
  
  
  }
  if (strcmp(Umain,UserName)==0&&strcmp(Pmain,PassWord)==0){
  system("cls");
- printf("*******************Welcome Mr. Wilson!!
-***************\n\n");
+ printf("*******************Welcome Mr. Wilson!! ***************\n\n");
  Main_coach_fun();
  }
  if(strcmp(Ufit,UserName)==0&&strcmp(Pfit,PassWord)==0){
  system("cls");
- printf("********************Welcome Mr. Brown!!
-***************\n\n");
+ printf("********************Welcome Mr. Brown!! ***************\n\n");
  Physical_fitness_coach_fun();
  }
  if (strcmp(Uassist,UserName)==0&&strcmp(Passist,PassWord)==0){
  system("cls");
- printf("*********************Welcome Miss Williams!!
-************\n\n");
+ printf("*********************Welcome Miss Williams!! ************\n\n");
  Assistant_coach_fun();
  } else{
  printf("Username or Password incorrect please try again\n\n");
@@ -203,9 +198,7 @@ CLUB*************\n\n\n");
  }
  for(i=0;i<num;i++)
  {
- fprintf(ptr,"%d %s %s %d %d\n 
-%s\n\n",plyr[i].id,plyr[i].firstname,plyr[i].lastname,plyr[i].won,plyr[i].rank
-,plyr[i].notes);
+ fprintf(ptr,"%d %s %s %d %d\n  %s\n\n",plyr[i].id,plyr[i].firstname,plyr[i].lastname,plyr[i].won,plyr[i].rank,plyr[i].notes);
  }
  
  fclose(ptr);
@@ -229,12 +222,10 @@ CLUB*************\n\n\n");
  }
  
  void Physical_fitness_coach_fun()
- {//physical fitness programs;keeping track of physical activities by 
-players
+ {//physical fitness programs;keeping track of physical activities by players
  
  int chc;
- printf("***************Physical Fitness Coach 
-Section*******************\n\n");
+ printf("***************Physical Fitness Coach Section*******************\n\n");
  printf("1. Enter activity of player\n");
  printf("2. Generate report.\n");
  printf("3. Logout\n");
@@ -310,8 +301,7 @@ Section*******************\n\n");
  fp = fopen("listing.txt", "w+");
  int x;
  int i;
- printf("\n*********************Registering 
-section.*******************\n\n");
+ printf("\n*********************Registering section.*******************\n\n");
  printf("\nHow many players to add? ");
  fflush(stdin);
  scanf("%d", &i);
@@ -379,15 +369,11 @@ Prosp_plyr[x].gender, Prosp_plyr[x].fname, Prosp_plyr[x].lname);
  fp=fopen("listing.txt","r");
  
  
- fscanf(fp,"%d %c %s 
-%s",&Prosp_plyr[x].playerid,&Prosp_plyr[x].gender,Prosp_plyr[x].fname,Prosp_pl
-yr[x].lname);
+ fscanf(fp,"%d %c %s %s",&Prosp_plyr[x].playerid,&Prosp_plyr[x].gender,Prosp_plyr[x].fname,Prosp_plyr[x].lname);
  while(!feof(fp))
  {
  x++;
- fscanf(fp,"%d %c %s 
-%s",&Prosp_plyr[x].playerid,&Prosp_plyr[x].gender,Prosp_plyr[x].fname,Prosp_pl
-yr[x].lname);
+ fscanf(fp,"%d %c %s %s",&Prosp_plyr[x].playerid,&Prosp_plyr[x].gender,Prosp_plyr[x].fname,Prosp_plyr[x].lname);
  
  }
  
@@ -397,9 +383,7 @@ yr[x].lname);
  printf("ID number Gender First Name\t Last Name\n\n");
  for(i=0;i<x;i++)
  {
- printf("%d \t %c\t %s \t %s 
-\n",Prosp_plyr[i].playerid,Prosp_plyr[i].gender,Prosp_plyr[i].fname,Prosp_plyr
-[i].lname);
+ printf("%d \t %c\t %s \t %s \n",Prosp_plyr[i].playerid,Prosp_plyr[i].gender,Prosp_plyr[i].fname,Prosp_plyr[i].lname);
  }
  fclose(fp);
  system("pause");
@@ -411,23 +395,20 @@ yr[x].lname);
  case 2:
  
  filpay=fopen("payment.txt","r");
- fscanf(filpay,"%d %s %s 
-%f",&player[x].id,player[x].firstname,player[x].lastname,&player[x].amtpaid);
+ fscanf(filpay,"%d %s %s %f",&player[x].id,player[x].firstname,player[x].lastname,&player[x].amtpaid);
  
  while(!feof(filpay))
  {
  
  x++;
- fscanf(filpay,"%d %s %s 
-%f",&player[x].id,player[x].firstname,player[x].lastname,&player[x].amtpaid);
+ fscanf(filpay,"%d %s %s %f",&player[x].id,player[x].firstname,player[x].lastname,&player[x].amtpaid);
  }
  system("cls");
  printf("***********Payment Report********\n\n");
  printf("ID number\t First Name\t Last Name\t Amount Paid\n");
  for(i=0;i<x;i++)
  {
- printf("%d\t\t %s\t\t%s\t 
-%f\n",player[i].id,player[i].firstname,player[i].lastname,player[i].amtpaid);
+ printf("%d\t\t %s\t\t%s\t %f\n",player[i].id,player[i].firstname,player[i].lastname,player[i].amtpaid);
  }
  system("pause");
  system("cls");
@@ -435,8 +416,7 @@ yr[x].lname);
  break;
  case 3:
  fitPr=fopen("fitness.txt","r");
- fscanf(fitPr,"%d%s
-%s",&ply[x].id,ply[x].firstname,ply[x].lastname);
+ fscanf(fitPr,"%d%s%s",&ply[x].id,ply[x].firstname,ply[x].lastname);
  
  fgets(activity,200,fitPr);
  
@@ -447,9 +427,8 @@ yr[x].lname);
  
  x++;
  
- fscanf(fitPr,"%d%s
-%s",&ply[x].id,ply[x].firstname,ply[x].lastname);
- fgets(activity,200,fitPr);
+ fscanf(fitPr,"%d%s%s",&ply[x].id,ply[x].firstname,ply[x].lastname);
+fgets(activity,200,fitPr);
  
  fgets(healthconds,200,fitPr);
  strcpy(ply[x].activity,activity);
@@ -461,8 +440,7 @@ yr[x].lname);
  printf("*****FITNESS REPORT********\n\n");
  printf("ID number First Name Last Name\n\n ");
  for(i=0;i<x;i++){
- printf("%d %s 
-%s\n",ply[i].id,ply[i].firstname,ply[i].lastname);
+ printf("%d %s %s\n",ply[i].id,ply[i].firstname,ply[i].lastname);
  
  
  
@@ -477,11 +455,9 @@ yr[x].lname);
  break;
  case 4:
  system("cls");
- printf("ID number First Name\t Last Name\t Tournaments Won\t 
-Rank\n\n");
+ printf("ID number First Name\t Last Name\t Tournaments Won\t Rank\n\n");
  ptr=fopen("progress.txt","r");
- fscanf(ptr,"%d %s %s %d %d 
-",&plyr[x].id,plyr[x].firstname,plyr[x].lastname,&plyr[x].won,&plyr[x].rank);
+ fscanf(ptr,"%d %s %s %d %d ",&plyr[x].id,plyr[x].firstname,plyr[x].lastname,&plyr[x].won,&plyr[x].rank);
  fgets(notes,500,ptr);
  strcpy(plyr[x].notes,notes);
  while(!feof(ptr))
@@ -500,9 +476,7 @@ Rank\n\n");
  
  for(i=0;i<x;i++)
  {
- printf("%d \t %s\t %s\t %d\t\t\t %d\n\n Notes: %s\n\n 
-",plyr[i].id,plyr[i].firstname,plyr[i].lastname,plyr[i].won,plyr[i].rank,plyr[
-i].notes);
+ printf("%d \t %s\t %s\t %d\t\t\t %d\n\n Notes: %s\n\n ",plyr[i].id,plyr[i].firstname,plyr[i].lastname,plyr[i].won,plyr[i].rank,plyr[i].notes);
  }
  fclose(ptr);
  system("pause");
@@ -551,9 +525,7 @@ i].notes);
  
  for(i=0;i<num;i++){
  
- fprintf(fitPR,"%d %s %s %s\n 
-%s\n",ply[i].id,ply[i].firstname,ply[i].lastname,ply[i].activity,ply[i].health
-conds);
+ fprintf(fitPR,"%d %s %s %s\n %s\n",ply[i].id,ply[i].firstname,ply[i].lastname,ply[i].activity,ply[i].healthconds);
  
  }
  
@@ -597,8 +569,7 @@ conds);
  
  }
  for(i=0;i<num;i++){
- fprintf(filpay,"%d %s %s 
-%f\n",player[i].id,player[i].firstname,player[i].lastname,player[i].amtpaid);
+ fprintf(filpay,"%d %s %s %f\n",player[i].id,player[i].firstname,player[i].lastname,player[i].amtpaid);
  }
  
  fclose(filpay);
@@ -606,3 +577,4 @@ conds);
  Secretary_fun();
  
  }
+

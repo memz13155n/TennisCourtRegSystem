@@ -1,61 +1,44 @@
-1 #include <stdio.h>
- 2 #include <stdlib.h>
- 3 #include <string.h>
- 4 
- 5 //Declaring main functions
- 6 void login();
- 7 void Secretary_fun();
- 8 void Main_coach_fun();
- 9 void Physical_fitness_coach_fun();
- 10 void Assistant_coach_fun();
- 11 
- 12 //Declaring sub functions
- 13 void payment();
- 14 void registration();
- 15 
- 16 void genReporting();
- 17 void trackFitness();
- 18 
- 19 
- 20 
- 21 
- 22 
- 23 
- 24 
- 25 
- 26 
- 27 
- 28 //structure to store player data in system
- 29 struct RegiSystem
- 30 {
- 31 int playerid;
- 32 char gender;
- 33 char fname[50];
- 34 char lname[50];
- 35 
- 36 
- 37 
- 38 }Prosp_plyr[20];
- 39 
- 40 
- 41 struct payment
- 42 {
- 43 char firstname[50];
- 44 char lastname[50];
- 45 int id;
- 46 float amtpaid;
- 47 
- 48 
- 49 }player[50];
- 50 
- 51 struct progress
- 52 {
- 53 char firstname[50];
- 54 char lastname[50];
-55 int id;
- 56 char notes[500];
- 57 
- 58 int won;
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+//Declaring main functions
+void login();
+void Secretary_fun();
+void Main_coach_fun();
+void Physical_fitness_coach_fun();
+void Assistant_coach_fun();
+
+//Declaring sub functions
+void payment();
+void registration();
+
+void genReporting();
+void trackFitness();
+
+//structure to store player data in system
+struct RegiSystem
+{
+int playerid;
+char gender;
+char fname[50];
+char lname[50];
+}Prosp_plyr[20];
+
+struct payment
+{
+char firstname[50];
+char lastname[50];
+int id;
+float amtpaid;
+}player[50];
+
+struct progress
+{
+char firstname[50];
+char lastname[50];
+int id;
+char notes[500];
+int won;
  59 int rank;
  60 }plyr[50];
  61 

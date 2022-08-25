@@ -27,3 +27,6 @@ chmod 777 main
 
 To run, do this:
 ./main
+
+username is PLewis
+password is sectGPTTC

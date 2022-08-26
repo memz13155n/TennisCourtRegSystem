@@ -22,6 +22,11 @@ See PDF document for known bugs to be aware of.
 To compile yourself, do this:
 gcc -o main.c main
 
+If on Android, copy main binary to ~, so write:
+cp main ~
+cd ~
+(Due to Android restriction on executables in shared folder)
+
 This C program needs read, write and execution permissions, so run command:
 chmod 777 main
 
